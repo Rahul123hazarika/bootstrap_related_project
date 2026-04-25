@@ -1,0 +1,524 @@
+.custom-btn:hover {
+  background-color: lch(83.05% 73.8 135.59);
+  border-color: lch(83.05% 73.8 135.59);
+  color: #fff;
+}
+
+.brand-row {
+  white-space: nowrap;
+}
+
+.brand-logo {
+  height: 28px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+
+}
+
+.image-card {
+  height: 360px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Left card should look visually smaller */
+.left-card {
+  max-width: 90%;
+  /* makes it look compact */
+}
+
+/* BIG PLAY BUTTON – OUTER */
+.video-play-btn {
+  position: absolute;
+  right: -22px;
+  /* bottom-right alignment */
+  bottom: -22px;
+  width: 160px;
+  /* BIG SIZE */
+  height: 160px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* INNER GREEN CIRCLE */
+.video-play-inner {
+  width: 130px;
+  height: 130px;
+  background: #9BEF4A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  /* BIG ICON */
+  color: #000;
+}
+
+.play_btn {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play-inner:hover .play_btn {
+  cursor: pointer;
+  filter: invert(1);
+}
+
+/* Hover polish */
+.video-play-btn:hover .video-play-inner {
+  transform: scale(1.08);
+  transition: transform 0.2s ease;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .image-card {
+    height: 280px;
+  }
+
+  .left-card {
+    max-width: 100%;
+  }
+}
+
+.circle-btn:hover {
+  background-color: black;
+  border-color: black;
+}
+
+/* Dark background */
+.case-section {
+  background: linear-gradient(135deg, #050505, #111);
+  border-radius: 30px;
+  padding: 60px 40px;
+}
+
+/* Filter buttons */
+.filter-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.filter-btn.active {
+  background: #9BEF4A;
+  color: #000;
+  border: none;
+}
+
+/* Horizontal scroll container */
+.case-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+/* Hide scrollbar (clean look) */
+.case-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.case-card {
+  min-width: 320px;
+  background: #111;
+  border-radius: 24px;
+  overflow: hidden;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* Images */
+.case-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Text inside card */
+.case-text {
+  padding: 16px;
+}
+
+.case-text small {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.case-text h6 {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* ===============================
+   HORIZONTAL SCROLL
+================================ */
+.case-scroll {
+  display: flex;
+  gap: 32px;
+  /* more spacing */
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.case-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.case-card {
+  min-width: 380px;
+  /* ⬅️ BIGGER CARD */
+  flex-shrink: 0;
+  color: #fff;
+}
+
+/* ===============================
+   IMAGE WRAPPER (BIGGER IMAGE)
+================================ */
+.case-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  /* ⬅️ BIGGER IMAGE */
+  overflow: hidden;
+  border-radius: 28px;
+  transition: border-radius 0.35s ease;
+}
+
+/* IMAGE */
+.case-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: border-radius 0.35s ease;
+}
+
+/* ===============================
+   FLAT CIRCLE HOVER (NOT SPHERICAL)
+================================ */
+.case-img-wrapper:hover {
+  border-radius: 50%;
+}
+
+.case-img-wrapper:hover img {
+  border-radius: 50%;
+}
+
+/* ===============================
+   HOVER OVERLAY (FLAT STYLE)
+================================ */
+.case-hover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* FLAT CIRCLE BORDER */
+.hover-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.35);
+  /* thinner = flat */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* CENTER GREEN BUTTON (FLAT) */
+.hover-inner {
+  width: 130px;
+  height: 130px;
+  background: #9BEF4A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* SHOW ON HOVER */
+.case-img-wrapper:hover .hover-circle {
+  opacity: 1;
+}
+
+/* ===============================
+   TEXT
+================================ */
+.case-text {
+  margin-top: 14px;
+}
+
+.case-text small {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.case-text h6 {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* 
+   MOBILE */
+@media (max-width: 768px) {
+  .case-card {
+    min-width: 300px;
+  }
+
+  .case-img-wrapper {
+    height: 220px;
+  }
+
+  .hover-inner {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+}
+
+/* Testimonial text */
+.testimonial-text {
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Avatar */
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Navigation buttons */
+.nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.light-btn {
+  color: #000;
+}
+
+.dark-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+/* Slide counter */
+.slide-count {
+  font-weight: 500;
+  color: #000;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .testimonial-text {
+    font-size: 20px;
+  }
+}
+
+/* FAQ Wrapper background */
+.faq-wrapper {
+  background: #fafafa;
+  border-radius: 30px;
+  padding: 60px;
+}
+
+/* Accordion item cleanup */
+.faq-accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Accordion button */
+.faq-accordion .accordion-button {
+  font-weight: 600;
+  padding: 24px 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Remove default Bootstrap bg */
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #000;
+}
+
+/* Body spacing */
+.faq-accordion .accordion-body {
+  padding: 0 0 24px 0;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Plus / Minus icons */
+.faq-accordion .accordion-button::after {
+  background-image: none;
+  content: "+";
+  font-size: 24px;
+  font-weight: 300;
+  transform: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  content: "−";
+}
+
+/* Mobile padding */
+@media (max-width: 768px) {
+  .faq-wrapper {
+    padding: 30px;
+  }
+}
+
+/* BLOG CARD */
+.blog-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Dots */
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.blue {
+  background: #3BA5F8;
+}
+
+.dot.orange {
+  background: #F26B3A;
+}
+
+.dot.purple {
+  background: #6C3BFF;
+}
+
+/* Arrow Button */
+.arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrow-btn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .blog-card {
+    padding: 22px;
+  }
+}
+
+/* CTA BOX */
+.cta-box {
+  background: radial-gradient(circle at top, #2a2f36, #000);
+  border-radius: 32px;
+  padding: 60px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  background: #9BEF4A;
+  color: #000;
+  border-radius: 40px;
+  padding: 14px 28px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background: #8ae63a;
+  color: #000;
+}
+
+/* FOOTER */
+footer {
+  background: #fff;
+}
+
+/* FOOTER LIST */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  color: #777;
+}
+
+.footer-list li {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+/* SOCIAL ICONS */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.social-icon:hover {
+  background: #000;
+  color: #fff;
+}
