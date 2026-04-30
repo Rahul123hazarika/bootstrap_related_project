@@ -1,0 +1,73 @@
+/* Carousel buttons */
+.carousel-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 18px;
+}
+
+.carousel-btn.dark {
+  background: #000;
+  color: #fff;
+}
+
+/* Track */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+/* Cards (BASE STATE) */
+.nft-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 12px;
+  width: 300px;
+
+  transition:
+    width 0.5s ease,
+    transform 0.5s ease,
+    opacity 0.4s ease;
+}
+
+/* IMAGE */
+.nft-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* ACTIVE CARD (RECTANGLE EXPANSION) */
+.nft-card.is-active {
+  width: 500px;
+}
+
+/* Title */
+.nft-card h6 {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* FORWARD MOVE (→) */
+.move-next .nft-card {
+  transform: translateX(40px);
+  opacity: 0.7;
+}
+
+/* BACKWARD MOVE (←) */
+.move-prev .nft-card {
+  transform: translateX(-40px);
+  opacity: 0.7;
+}
+
+/* ACTIVE CARD OVERRIDES MOVEMENT */
+.move-next .nft-card.is-active,
+.move-prev .nft-card.is-active {
+  transform: translateX(0);
+  opacity: 1;
+}
